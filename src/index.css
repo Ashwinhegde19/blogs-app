@@ -1,0 +1,224 @@
+/* General reset */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar h1 {
+  margin: 0;
+}
+
+.navbar .links {
+  display: flex;
+  gap: 20px;
+  align-items: center; 
+}
+
+.navbar .links .nav-link {
+  color: #a7a4a4;
+  text-decoration: none;
+}
+
+.navbar .search-container {
+  display: flex;
+  gap: 5px;
+}
+
+.navbar .search-container input {
+  padding: 5px;
+}
+
+.navbar .search-container button {
+  padding: 5px;
+}
+
+/* Blog and User lists */
+.blog-list, .user-list {
+  padding: 20px;
+}
+
+.blog-list h2, .user-list h2 {
+  margin-top: 0;
+}
+
+/* Blog preview */
+.blog-preview {
+  padding: 10px 0; 
+}
+
+.blog-preview h3 {
+  margin: 0;
+}
+
+.blog-preview p {
+  margin: 5px 0;
+}
+
+.blog-preview small {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.blog-preview a {
+  color: #333;
+  text-decoration: underline;
+}
+
+.blog-preview .view-link {
+  margin-left: 10px; 
+  font-weight: bold;
+  float: right; 
+  color: blue; 
+  font-size: 14px;
+}
+
+.blog-preview .view-link:hover {
+  text-decoration: none;
+}
+
+.container {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.blog-item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 10px;
+  
+}
+
+.blog-item h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.blog-item p {
+  margin-bottom: 10px;
+}
+
+.user-info {
+  font-size: 14px;
+  color: #666;
+  float: right;
+}
+
+
+.author-link .author-info {
+  color: #333;
+  text-decoration: underline;
+  
+}
+
+
+.user-info .author-link:hover {
+  text-decoration: none;
+}
+
+
+/* Navbar responsive adjustments */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar .links {
+    margin-top: 10px;
+  }
+}
+
+/* Navbar branding */
+.navbar .navbar-brand {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.navbar .navbar-brand:hover {
+  text-decoration: underline;
+}
+
+/* User comments styles */
+.user-title {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 20px 20px;
+  padding: 20px;
+}
+.user-container {
+  display: flex;
+  margin: 20px auto;
+  padding: 40px;
+  border-radius: 8px;
+}
+
+.user-posts {
+  margin-right: 10px; 
+}
+
+.user-comments {
+  margin-left: 10px;
+}
+
+/* Container for BlogDetails */
+.blog-detail-container {
+  display: flex; 
+  margin: 20px 30px;
+  padding: 30px;
+} 
+
+
+/* Left side (blog details) */
+.left {
+  flex:1
+}
+
+.blog-detail-title {
+  font-size: 34px;
+  font-weight: bold;
+  padding-left: 60px;
+
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+/* Right side (comments) */
+.right {
+  flex: 1;
+  margin-left: 20px;
+  float: right; 
+   
+}
+
+.right h3 {
+  margin-top: 0;
+}
+
+.comment-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
