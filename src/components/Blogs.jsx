@@ -10,7 +10,8 @@ function Blogs() {
   useEffect(() => {
     axios.get('https://jsonplaceholder.typicode.com/posts')
       .then(response => {
-        const sortedBlogs = response.data.sort((a, b) => a.title.localeCompare(b.title));
+        
+        const sortedBlogs = response.data.sort((a, b) => a.title.localeCompare(b.title)); // Sorted the blogs based on the title
         setBlogs(sortedBlogs);
       })
       .catch(error => console.error('Error fetching blogs:', error));
