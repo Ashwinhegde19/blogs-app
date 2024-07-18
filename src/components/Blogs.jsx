@@ -1,8 +1,7 @@
-import  { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-
-import '../index.css'; 
+import '../index.css';
 
 function Blogs() {
   const [blogs, setBlogs] = useState([]);
@@ -10,7 +9,10 @@ function Blogs() {
 
   useEffect(() => {
     axios.get('https://jsonplaceholder.typicode.com/posts')
-      .then(response => setBlogs(response.data))
+      .then(response => {
+        const sortedBlogs = response.data.sort((a, b) => a.title.localeCompare(b.title));
+        setBlogs(sortedBlogs);
+      })
       .catch(error => console.error('Error fetching blogs:', error));
 
     axios.get('https://jsonplaceholder.typicode.com/users')
@@ -31,15 +33,11 @@ function Blogs() {
               <Link to={`/blog/${blog.id}`} className="view-link">View</Link>
             </h3>
             <p>{blog.body}</p>
-         
-          <div className="user-info">
-            {getUser(blog.userId) ? (
-              
-                <Link to={`/user/${blog.userId}`} className="author-link"> By:{getUser(blog.userId).name}</Link>
-             
-            ) : null
-            }
-             </div>
+            <div className="user-info">
+              {getUser(blog.userId) ? (
+                <Link to={`/user/${blog.userId}`} className="author-link">By: {getUser(blog.userId).name}</Link>
+              ) : null}
+            </div>
           </div>
         </div>
       ))}
